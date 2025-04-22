@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React from "react";
 
 const directors = [
   {
@@ -15,18 +15,22 @@ const directors = [
   },
 ];
 
-
-function Directors() {
+export default function DirectorsPage() {
   return (
-    <>
-      <header>
-        {/* What component should go here? */}
-      </header>
-      <main>
-        {/* Director info here! */}
-      </main>
-    </>
+    <div>
+      <h1>Directors Page</h1>
+      <ul>
+        {directors.map((director) => (
+          <li key={director.name}>
+            <strong>{director.name}</strong>
+            <ul>
+              {director.movies.map((movie) => (
+                <li key={movie}>{movie}</li>
+              ))}
+            </ul>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
-};
-
-export default Directors;
+}

@@ -1,33 +1,30 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
-import "./NavBar.css";
 
-function NavBar() {
+export default function NavBar() {
   return (
-    <nav className="navbar">
-      <ul>
-        <li>
-          <NavLink to="/" className="nav-link">
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/movies" className="nav-link">
-            Movies
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/actors" className="nav-link">
-            Actors
-          </NavLink>
-        </li>
-      </ul>
-      <li>
-        <NavLink to="/directors" className="nav-link">
-          Directors
-        </NavLink>
-      </li>
-    </nav>
-    );
-};
-
-export default NavBar;
+    <div className="navbar">
+      <NavLink
+        to="/"
+        end
+        className={({ isActive }) => (isActive ? "active" : "")}
+      >
+        Home
+      </NavLink>{" "}
+      |{" "}
+      <NavLink
+        to="/actors"
+        className={({ isActive }) => (isActive ? "active" : "")}
+      >
+        Actors
+      </NavLink>{" "}
+      |{" "}
+      <NavLink
+        to="/directors"
+        className={({ isActive }) => (isActive ? "active" : "")}
+      >
+        Directors
+      </NavLink>
+    </div>
+  );
+}
