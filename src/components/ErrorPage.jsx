@@ -3,7 +3,8 @@ import React from "react";
 export default function ErrorPage() {
   return (
     <div>
-      <h1>Oops! Looks like something went wrong.</h1>
+      <h1>404 Not Found</h1>
+      <p>Sorry, the page you're looking for doesn't exist.</p>
     </div>
   );
 }
