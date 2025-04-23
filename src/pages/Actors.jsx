@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const actors = [
   {
@@ -26,6 +27,7 @@ const actors = [
 export default function ActorsPage() {
   return (
     <div>
+      <Link to="/">Home</Link>
       <h1>Actors Page</h1>
       <ul>
         {actors.map((actor) => (
