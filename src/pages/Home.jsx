@@ -4,13 +4,6 @@ import { createMemoryRouter, Link } from "react-router-dom";
 import MovieCard from "../components/MovieCard";
 import routes from "../routes";
 
-// const movies = [
-//   { id: 1, title: "Doctor Strange" },
-//   { id: 2, title: "Trolls" },
-//   { id: 3, title: "Pitch Perfect" },
-//   { id: 4, title: "Jack Reacher: Never Go Back" },
-// ];
-
 const router = createMemoryRouter(routes);
 
 export default function HomePage() {
@@ -29,9 +22,11 @@ export default function HomePage() {
       {movies.map((movie) => (
         <div key={movie.id}>
           <h2>{movie.title}</h2>
-          <MovieCard to={`/movie/${movie.id}`}>View Info</MovieCard>
+          <Link to={`/movie/${movie.id}`}>View Info</Link>
         </div>
       ))}
     </div>
   );
 }
+
+
