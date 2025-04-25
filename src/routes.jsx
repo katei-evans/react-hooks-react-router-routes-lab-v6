@@ -4,6 +4,7 @@ import Actors from "./pages/Actors";
 import Directors from "./pages/Directors";
 import Movie from "./pages/Movie";
 import ErrorPage from "./components/ErrorPage";
+import NavBar from "./components/NavBar";
 
 const router = createBrowserRouter([
   {
